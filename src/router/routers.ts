@@ -10,6 +10,7 @@ import AddQuestionView from "@/views/question/AddQuestionView.vue";
 import ManageQuestionView from "@/views/question/ManageQuestionView.vue";
 import QuestionsView from "@/views/question/QuestionsView.vue";
 import ViewQuestionView from "@/views/question/ViewQuestionView.vue";
+import QuestionSubmitView from "@/views/question/QuestionSubmitView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -63,6 +64,11 @@ export const routes: Array<RouteRecordRaw> = [
     component: QuestionsView,
   },
   {
+    path: "/question_submit",
+    name: "提交记录",
+    component: QuestionSubmitView,
+  },
+  {
     path: "/view/question/:id",
     name: "在线做题",
     component: ViewQuestionView,
@@ -87,6 +93,11 @@ export const routes: Array<RouteRecordRaw> = [
     meta: {
       hideInMenu: true,
     },
+  },
+  {
+    path: "/introduce",
+    name: "答题规则",
+    component: () => import("../views/SystemIntroduceView.vue"),
   },
   // {
   //   path: "/admin",

@@ -21,8 +21,11 @@
         pageSize: searchParams.pageSize,
         current: searchParams.current,
         total,
+        showJumper: true,
+        // showPageSize: true,
       }"
       @page-change="onPageChange"
+      @pageSizeChange="onPageSizeChange"
     >
       <template #tags="{ record }">
         <a-space wrap>
@@ -35,7 +38,9 @@
       <template #acceptedRate="{ record }">
         {{
           `${
-            record.submitNum ? record.acceptedNum / record.submitNum : "0"
+            record.submitNum
+              ? ((record.acceptedNum / record.submitNum) * 100).toFixed(2)
+              : "0"
           }% (${record.acceptedNum}/${record.submitNum})`
         }}
       </template>
@@ -125,25 +130,31 @@ const columns = [
   {
     title: "题号",
     dataIndex: "id",
+    align: "center",
   },
   {
     title: "题目名称",
     dataIndex: "title",
+    align: "center",
   },
   {
     title: "标签",
     slotName: "tags",
+    align: "center",
   },
   {
     title: "通过率",
     slotName: "acceptedRate",
+    align: "center",
   },
   {
     title: "创建时间",
     slotName: "createTime",
+    align: "center",
   },
   {
     slotName: "optional",
+    align: "center",
   },
 ];
 
@@ -151,6 +162,16 @@ const onPageChange = (page: number) => {
   searchParams.value = {
     ...searchParams.value,
     current: page,
+  };
+};
+/**
+ * 分页大小
+ * @param size
+ */
+const onPageSizeChange = (size: number) => {
+  searchParams.value = {
+    ...searchParams.value,
+    pageSize: size,
   };
 };
 

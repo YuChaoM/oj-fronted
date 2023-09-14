@@ -16,13 +16,12 @@ export default {
       const res = await UserControllerService.getLoginUserUsingGet(); // 去后端获取登陆状态
       if (res.code === 0) {
         commit("updateUser", res.data);
-        console.log("code == 0");
+        // console.log("code == 0");
       } else {
         commit("updateUser", {
           ...state.loginUser,
           userRole: ACCESS_ENUM.NOT_LOGIN,
         });
-        console.log("code != 0");
       }
     },
   },

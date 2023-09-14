@@ -75,50 +75,62 @@ const columns = [
   {
     title: "id",
     dataIndex: "id",
+    align: "center",
   },
   {
     title: "标题",
     dataIndex: "title",
+    align: "center",
   },
   {
     title: "内容",
     dataIndex: "content",
+    align: "center",
   },
   {
     title: "标签",
     dataIndex: "tags",
+    align: "center",
   },
   {
     title: "答案",
     dataIndex: "answer",
+    align: "center",
   },
   {
     title: "提交数",
     dataIndex: "submitNum",
+    align: "center",
   },
   {
     title: "通过数",
     dataIndex: "acceptedNum",
+    align: "center",
   },
   {
     title: "判题配置",
     dataIndex: "judgeConfig",
+    align: "center",
   },
   {
     title: "判题用例",
     dataIndex: "judgeCase",
+    align: "center",
   },
   {
     title: "用户id",
     dataIndex: "userId",
+    align: "center",
   },
   {
     title: "创建时间",
     dataIndex: "createTime",
+    align: "center",
   },
   {
     title: "操作",
     slotName: "optional",
+    align: "center",
   },
 ];
 

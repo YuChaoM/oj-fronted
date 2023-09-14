@@ -7,7 +7,9 @@
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
-      <a-layout-footer class="footer">Footer</a-layout-footer>
+      <a-layout-footer class="footer">
+        Yuchao©2023 All rights reserved
+      </a-layout-footer>
     </a-layout>
   </div>
 </template>
@@ -21,8 +23,8 @@
 }
 
 #basicLayout .content {
-  background: linear-gradient(to right, #bbb, #fff);
-  margin-bottom: 16px;
+  background: url("https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png")
+    0% 0% / 100% 100%;
   padding: 20px;
 }
 
